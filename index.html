@@ -1,177 +1,196 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
-    <title>Instagram Photo Feed</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>Instagram Photo Feed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand col-10" href="#"><i class="fa-brands fa-instagram me-1"></i>Instagram</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item me-1">
-          <button type="button" class="btn btn-success p-1.8" data-bs-toggle="modal" data-bs-target="#NewPost">
-            Create new post
-          </button>
-<div class="modal fade" id="NewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Caption:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-          <button class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
-          <button class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand col-10" href="#"><i class="fa-brands fa-instagram me-1"></i>Instagram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item me-1">
+            <button type="button" class="btn btn-success p-1.8" data-bs-toggle="modal" data-bs-target="#NewPost">
+              Create new post
+            </button>
+            <div class="modal fade" id="NewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Caption:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                      <button class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                      <button class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-secondary text-white rounded" href="#" id="navbarDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle bg-secondary rounded" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Accesibility</a></li>
-            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-    </nav>
-  <ul class="nav nav-tabs justify-content-center">
+  </nav>
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="multi-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+        aria-controls="home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
     </li>
-    <li class="nav-item" role="presentation"></button>
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><i class="fa-regular fa-square"></i></button>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+        aria-controls="profile" aria-selected="false"><i class="fa-regular fa-square"></i></button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div class="tab-pane fade show active" id="multiple" role="tabpanel" aria-labelledby="multiple-tab">
-                    <div class="row justify-content-center"> 
-                        <div class="col-12 col-md-8 col-lg-6"> 
-                            <div class="container">
-                                <div class="row row-cols-1 row-cols-md-3 mt-1 g-2">
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=1" class="card-img-top">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=2" class="card-img-top">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=3" class="card-img-top">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="row row-cols-1 row-cols-md-3 mt-1 g-2">
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=4" class="card-img-top">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=5" class="card-img-top">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=6" class="card-img-top">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="row row-cols-1 row-cols-md-3 mt-1 g-2">
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=7" class="card-img-top">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=8" class="card-img-top">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <img src="https://picsum.photos/400/400?random=9" class="card-img-top">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>            
-                </div>        
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-              <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-6">
-                        <br>
-                        <div class="card mb-3"> 
-                            <h5 class="card-title py-2 ps-3 mb-0">Amazing</h5> 
-                            <img src="https://picsum.photos/600/400?random=1" class="card-img-top">
-                            <div class="card-body">
-                                <h6 class="card-subtitle ps-3 mb-1">64 likes</h6> 
-                                <p class="card-text ps-3 mb-0">Discover the small things</p>
-                            </div>
-                        </div>
-                        <br>
-
-                        <div class="card mb-3"> 
-                            <h5 class="card-title py-2 ps-3 mb-0">Beauty</h5> 
-                            <img src="https://picsum.photos/600/400?random=2" class="card-img-top">
-                            <div class="card-body">
-                                <h6 class="card-subtitle ps-3 mb-1">78 likes</h6> 
-                                <p class="card-text ps-3 mb-0">It is everywhere</p>
-                            </div>
-                        </div>
-                        <br>
-
-                        <div class="card mb-3"> 
-                            <h5 class="card-title py-2 ps-3 mb-0">Photograph</h5> 
-                            <img src="https://picsum.photos/600/400?random=3" class="card-img-top">
-                            <div class="card-body">
-                                <h6 class="card-subtitle ps-3 mb-1">189 likes</h6> 
-                                <p class="card-text ps-3 mb-0">Every detail counts</p>
-                            </div>
-                        </div>
-                        <br>                            
-                    
-                    </div>
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="tab-pane fade show active" id="multiple" role="tabpanel" aria-labelledby="multiple-tab">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-8 col-lg-12">
+            <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-md-3 mt-1 g-2">
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=1" class="card-img-top">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=2" class="card-img-top">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=3" class="card-img-top">
+                  </div>
+                </div>
               </div>
-            </div>  
-</div>
+            </div>
+            <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-md-3 mt-1 g-2">
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=4" class="card-img-top">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=5" class="card-img-top">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=6" class="card-img-top">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-md-3 mt-1 g-2">
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=7" class="card-img-top">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=8" class="card-img-top">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://picsum.photos/400/400?random=9" class="card-img-top">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <br>
+          <div class="card mb-3">
+            <div class="date">
+              <h5 class="card-title py-2 ps-3 mb-0">Amazing</h5>
+              <div class="py-2 pe-3">15/02</div>
+            </div>
+            <img src="https://picsum.photos/600/400?random=1" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-subtitle ps-3 mb-1">64 likes</h6>
+              <p class="card-text ps-3 mb-0">Travel around the World</p>
+            </div>
+          </div>
+          <br>
+          <div class="card mb-3">
+            <div class="date">
+              <h5 class="card-title py-2 ps-3 mb-0">Awesome</h5>
+              <div class="py-2 pe-3">11/04</div>
+            </div>
+            <img src="https://picsum.photos/600/400?random=2" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-subtitle ps-3 mb-1">158 likes</h6>
+              <p class="card-text ps-3 mb-0">Find your motivation</p>
+            </div>
+          </div>
+          <br>
+          <div class="card mb-3">
+            <div class="date">
+              <h5 class="card-title py-2 ps-3 mb-0">Outstanding</h5>
+              <div class="py-2 pe-3">10/08</div>
+            </div>
+            <img src="https://picsum.photos/600/400?random=3" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-subtitle ps-3 mb-1">854 likes</h6>
+              <p class="card-text ps-3 mb-0">Make your own path</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>
